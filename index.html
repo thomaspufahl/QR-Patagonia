@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GENERADOR QR</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+	<script defer src="./src/qrcode.js"></script>
+	<script defer src="./src/generandoQR.js"></script>
+	<main>
+		<section>
+			<form id="formularioQR">
+				<input class="input" type="text" name="dni" id="dni" placeholder="12456789">
+				<input class="input" type="text" name="apellido" id="apellido" placeholder="PEREZ">
+				<input class="input" type="text" name="nombre" id="nombre" placeholder="PEDRITO">
+				<input class="input" type="text" name="nac" id="nac" placeholder="15/09/2006">
+				<button type="submit" id="btn">Generar QR</button>
+			</form>
+		</section>
+		<aside id="seccionQR">
+			<strong id="textoPersona">
+				<span id="personaDelQR"></span></strong>
+			<div id="contenedorQR"></div>
+		</aside>
+	</main>
+</body>
+
+</html>

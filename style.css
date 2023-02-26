@@ -1,0 +1,100 @@
+/* RESETS */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/* STYLES */
+@media (max-width: 450px) {
+	body {
+		min-height: 80vh;
+		display: grid;
+
+	}
+
+	main {
+		margin-top: 1rem;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: 'seccionQR' 'seccionFormulario';
+		gap: 1.5rem;
+	}
+
+	section {
+		grid-area: seccionFormulario;
+	}
+
+	aside {
+		grid-area: seccionQR;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: 'textoPersona' 'imagenQR';
+
+		align-items: center;
+		justify-items: center;
+		font-size: 1.1rem;
+
+		border: 1px solid black;
+	}
+
+	form {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-areas: 'dni' 'apellido' 'nombre' 'nacimiento' 'boton';
+		gap: 1rem;
+	}
+
+	#dni {
+		grid-area: dni;
+	}
+
+	#apellido {
+		grid-area: apellido;
+	}
+
+	#nombre {
+		grid-area: nombre;
+	}
+
+	#nac {
+		grid-area: nacimiento;
+	}
+
+	#btn {
+		grid-area: boton;
+	}
+
+	#textoPersona {
+		grid-area: textoPersona;
+	}
+
+	#contenedorQR {
+		grid-area: imagenQR;
+	}
+}
+
+.input {
+	text-transform: uppercase;
+}
+
+#btn {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 0.2rem;
+}
